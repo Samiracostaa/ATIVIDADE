@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+  class Main {
+    public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+    double saldo = 1000.00;
+    double saque;
+ 	int op= 1;
+
+     while(op == 1){
+
+        System.out.println("Caixa Eletronico");
+        System.out.println("Informe o saldo? ");
+        saque = entrada.nextDouble();
+
+        if(saque <= saldo){
+          saldo = saldo - saque;
+          System.out.println("Saque efetudao = "+ saldo);
+        }else{
+          System.out.println("O saque é insuficiente.");
+        }
+       
+        System.out.print("Deseja executar outra operação? ");
+        System.out.print("Digite 1 para continuar. ");
+        System.out.print("Digite 0 para finalizar. ");  
+
+     }  
+  
+    }
+  }
